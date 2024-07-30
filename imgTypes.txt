@@ -1,0 +1,6 @@
+png
+jpg
+jpeg
+ico
+svg
+gif
