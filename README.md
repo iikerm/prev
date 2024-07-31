@@ -17,7 +17,7 @@ This script has been tested using python version `3.10.12`, but there shouldn't 
 > - `sudo apt install python3`
 ### Installing the kitty terminal emulator
 The following link is the github repo for the kitty terminal emulator:  
-https://github.com/kovidgoyal/kitty 
+https://github.com/kovidgoyal/kitty  
 Inside this repo are the instructions for installing it
 > If you are using Ubuntu, you can simply write the following command in the Gnome terminal:
 > - `sudo apt install kitty`
