@@ -11,6 +11,10 @@ Even though the aim of this program is to be able to quickly preview most files 
 > For Ubuntu, this means that PDF files are opened using the `evince` tool, if your system doesn't have it, the pdf preview won't work
 
 ## Prerequisites
+### Having python installed in your machine
+This script has been tested using python version `3.10.12`, but there shouldn't be any problem if using a different version
+> For Ubuntu users, write the following command in the Gnome terminal:
+> - `sudo apt install python3`
 ### Installing the kitty terminal emulator
 The following link is the github repo for the kitty terminal emulator:  
 https://github.com/kovidgoyal/kitty 
