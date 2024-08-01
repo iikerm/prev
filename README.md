@@ -23,7 +23,7 @@ For usage with text files, there are some extra arguments that can be passed alo
 ### Image file types
 Because prev uses a terminal utility called `imageMagick`, it theoretically supports the same file types, even though all of them haven't been tested yet  
 ### Text file types
-When prev is not used with an image, pdf or other specific file types, it will assume that it is dealing with a text file and prints its contents using the `cat` command, and therefore it is able to read almost all of the text files it will encounter
+When prev is not used with an image, pdf or other specific file types, it will assume that it is dealing with a text file and prints its contents using the `cat` command, and therefore it is able to read almost any text file it encounters
 ### PDFs and other specific file types
 Even though the aim of this program is to be able to quickly preview most files that one would usually encounter inside the terminal, due to limitations and ease of use, other file types such as PDFs or videos (not implemented yet), are opened in an external file viewer
 > For Ubuntu, this means that PDF files are opened using the `evince` tool, if your system doesn't have it, the pdf preview won't work
