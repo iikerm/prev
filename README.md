@@ -30,7 +30,7 @@ This utility is used for image previewing and can be easily installed using:
 This will save you from having to write the full command to execute this script every time you want to use it (`$ python3 /path/prev.py <args>`)
 1. To create an alias go to your shell config file (`.bashrc` if you haven't changed your shell, or `.<shell_name>rc` if you have)
 2. Then go to the end of the file and write:
-   - `alias prev='python3 /path_to_script/prev.py'
+   - `alias prev='python3 /path_to_script/prev.py'`
 3. Now you can just type `$ prev` in your terminal and it will work a lot better
 
 ### [lsDeluxe](https://github.com/lsd-rs/lsd) utility
