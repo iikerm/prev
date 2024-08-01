@@ -2,7 +2,7 @@ import sys
 import os
 import datetime as dt       # To convert modification & creation date timestamps into normal dates
 
-scriptPath = "/home/iker/.iSpreview/"
+scriptPath = "YourPath/"
 ls_format = "lsd"   # Replace this with 'ls' if you dont have the 'lsd' utility installed
 
 bold_code = "\033[1m"
