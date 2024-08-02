@@ -12,7 +12,7 @@ For any supported file (images, pdfs, text files etc), write `$ prev <path_to_fi
 ### Additional arguments
 There are some arguments that can be passed without any path, such as:
 - `--clear-images` or `-ci`: This will erase from the window any images that have been previously rendered
-- `--help` or `-h` [not implemented yet]: This will show a summary of the script's usage  
+- `--help` or `-h`: This will show a summary of the script's usage  
   
 For usage with text files, there are some extra arguments that can be passed along with the path:
 - `--see-from=<pos>` or `-p=<pos>`: Determines from which line position will the text file be read. Default is 1.
