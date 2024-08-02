@@ -43,6 +43,9 @@ Inside this repo are the instructions for installing it
 This utility is used for image previewing and can be easily installed using:
 - `$ sudo apt install imagemagick`
 
+## Installation
+To be able to use the prev tool, download both `prev.py` and `imgTypes.txt` and place them anywhere you want, given that they are both be in the same folder.
+
 ## Optional (but recommended) extras
 ### Creating an alias for it
 This will save you from having to write the full command to execute this script every time you want to use it (`$ python3 /path/prev.py <args>`)
