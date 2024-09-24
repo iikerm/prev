@@ -2,29 +2,53 @@ import sys
 import os
 import datetime as dt       # To convert modification & creation date timestamps into normal dates
 
-scriptPath = "YourPath/"
+scriptPath = "/home/iker/.scripts/prev/"
 ls_format = "lsd"   # Replace this with 'ls' if you dont have the 'lsd' utility installed
 
 bold_code = "\033[1m"
 uline_code = "\033[4m"
 end_style_code = "\033[0m"
 
-validArguments = {"clear_imgs1": "-ci", "clear_imgs2": "--clear-images", 
+validArguments = {"help1": "-h", "help2": "--help",
+                  "clear_imgs1": "-ci", "clear_imgs2": "--clear-images", 
                   "show_lines1": "-l=", "show_lines2": "--show-lines=",
                   "see_from1": "-p=", "see_from2": "--see-from="}
 
+helpText = f"""\t{bold_code}{uline_code}Prev tool help:{end_style_code}
+
+        {bold_code}Usage:{end_style_code}
+
+        Write prev <path_to_file_or_dir> <argument(s)> in order to preview a file.
+        If no path is provided, it will preview the current directory
+        
+        {bold_code}Arguments:{end_style_code}
+
+        -ci             \t--clear-images            \t This will erase from the window any images that have been previously rendered
+
+        -h              \t--help                    \t It will display this page
+
+        {bold_code}Extra arguments that can be used with text files:{end_style_code}
+
+        -p=<pos>        \t--see-from=<pos>          \t Determines from which line position will the text file be read. Default is 1.
+
+        -l=<line_amount>\t--show-lines=<line_amount>\t Determines the amount of lines that will be displayed from a 
+                                                    \t\t given line onwards. Any negative value will mean that the 
+                                                    \t\t file will be output entirely. Default is -1.
+
+    """
 
 def formatAsError(text: str):
     text = "\033[91m" + text + end_style_code
     return text
 
-def listDirs(dirToList=os.getcwd()):
+def listDirs(dirToList=os.getcwd(), spaces=12):
+    print("\n"*spaces)
     if dirToList != os.getcwd():
         dirToList = dirToList.replace(os.getcwd(), ".")
         # This if can be removed if you want the absolute path to always be displayed
         # Made so that paths being displayed are not as long
 
-    print(f"\n󱞊    {bold_code}{dirToList}{end_style_code}\n")       # 󱞊 is the nerdfonts icon for a folder with an eye
+    print(f"\n{uline_code}󱞊    {bold_code}{dirToList}{end_style_code}")       # 󱞊 is the nerdfonts icon for a folder with an eye
     os.system(f"{ls_format} {dirToList} --group-dirs=first")
 
 def checkInt(toCheck: str, errorText: str):
@@ -69,6 +93,10 @@ args = args[count:]     # Excludes the provided file name from the list of argum
 if fname.__contains__(validArguments["clear_imgs1"]) or fname.__contains__(validArguments["clear_imgs2"]):
     os.system("kitty +kitten icat --clear")
     print("Images cleared successfully")
+    raise SystemExit
+
+elif fname.__contains__(validArguments["help1"]) or fname.__contains__(validArguments["help2"]):
+    print(helpText)
     raise SystemExit
 
 
