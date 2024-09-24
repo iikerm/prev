@@ -61,9 +61,10 @@ To be able to use the prev tool, download both `prev.py` and `imgTypes.txt` and 
 ### Creating an alias for it
 This will save you from having to write the full command to execute this script every time you want to use it (`$ python3 /path/prev.py <args>`)
 1. To create an alias go to your shell config file (`.bashrc` if you haven't changed your shell, or `.<shell_name>rc` if you have)
+> Shell config files are usually found inside the `/home/<user>/` folder
 2. Then go to the end of the file and write:
    - `alias prev='python3 /path_to_script/prev.py'`
-3. Now you can just type `$ prev` in your terminal and it will work a lot better
+3. Now you can just type `$ prev` in your terminal and it should work fine.
 
 ### [lsDeluxe](https://github.com/lsd-rs/lsd) utility
 This is a utility that will allow you to use the `lsd` command in order to decorate your terminal and add some icons to the otherwise boring `ls` command  
